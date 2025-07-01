@@ -1,0 +1,14 @@
+bitwise comparision notes:
+good: 1	Alignment
+evil: 2
+neutral: 4
+Heroic: 8 	TONE
+Grimdark: 16	
+Balanced: 32 STYLE
+Combat: 64	
+Intrigue_Social: 128
+Street_level: 256 	PlotStakesScale
+Country_level: 512
+World_Level: 1024
+
+total: 2047
