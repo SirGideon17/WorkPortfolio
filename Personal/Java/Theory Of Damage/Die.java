@@ -1,16 +1,31 @@
+/**
+ * This is an enum that was given to me by my CS 121 teacher. We built it in class and it was quite fun to use.
+ * I would like to turn the parse die method into a switch statement at some point.
+ * @author Lawence Sevigney 
+ */
+
 import java.util.Random;
 
+//This is where we build the individual dice.
 public enum Die {
     D4(4), D6(6), D8(8), D10(10), D12(12), D20(20), D100(100), NO_DICE(1);
 
     private int sides;
     private Random generator;
 
+    /**
+     * This is the constructor of the class. This generates the random using the java random generator.
+     * @param numSides
+     */
     private Die(int numSides) {
         sides = numSides;
         generator = new Random();
     }
 
+    /**
+     * This 'roll's' the die. Using the number of sides as the highest value.
+     * @return randomly determined number from 1 to highest value.
+     */
     public int rollDie() {
         int valueRolled;
 
@@ -19,6 +34,9 @@ public enum Die {
         return valueRolled;
     }
 
+    /**
+     * String method, returns the gaming convention of a die. Such as if a die is 4 sided, then it is called a d4.
+     */
     public String toString() {
         switch (this) {
             case D4:
@@ -47,6 +65,11 @@ public enum Die {
         }
     }
 
+    /**
+     * This parses a string to determine what die to return.
+     * @param dieString
+     * @return the die value of the string.
+     */
     public static Die parseDie(String dieString) {
         String compareString = dieString.trim().toLowerCase();
         if (compareString.equals("d4")) {

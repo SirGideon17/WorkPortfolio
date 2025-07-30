@@ -1,3 +1,9 @@
+/**
+ * This is the main class for my Thoery of Damage. This is where I need to set up the characters. Then run the simulation.
+ * This is where the number of rounds and monsterAC are for right now.
+ * @author Simeon Grant
+ */
+
 public class TheoryOfDamageMain {
     public static void main(String[] args) {
         int rounds = 20;
